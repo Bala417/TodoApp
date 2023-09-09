@@ -1,3 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 body {
-  background-color: aquamarine;
+  background-color: rgb(56, 64, 61);
+  color: white;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+}
+
+.todoList-container {
+  margin: auto;
+}
+
+.editIcon {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  height: 20px;
+  justify-content: center;
+
+  align-self: center;
+}
+.deleteIcon {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  height: 20px;
+  justify-content: center;
+  align-self: center;
+}
+.item-container {
+  display: flex;
+}
+
+.item-container > h3 {
+  flex: 2;
+}
+.todoform-container {
+  display: flex;
+}
+/* .todoform-container > Form {
+  justify-content: center;
+} */
+
+.create-form {
 }

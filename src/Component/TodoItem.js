@@ -6,7 +6,7 @@ const TodoItem = ({
   todo,
   isEdit,
   setIsEdit,
-  setEditId,
+  setCurrdata,
   todoList,
   setTodoList,
 }) => {
@@ -15,25 +15,23 @@ const TodoItem = ({
     setTodoList(todoDelete);
   };
   return (
-    <div>
-      <>
-        <h1 style={{ display: "inline", paddingRight: "10px" }}>{todo.todo}</h1>
-        <img
-          src={editIcon}
-          alt="edit"
-          style={{ width: "24px", height: "24px", paddingRight: "10px" }}
-          onClick={() => {
-            setIsEdit(!isEdit);
-            setEditId(todo.id);
-          }}
-        />
-        <img
-          src={deleteIcon}
-          alt="delete"
-          style={{ width: "24px", height: "24px", paddingRight: "10px" }}
-          onClick={handleDelete}
-        ></img>
-      </>
+    <div className="item-container">
+      <h3>{todo.todo}</h3>
+      <img
+        src={editIcon}
+        alt="edit"
+        className="editIcon"
+        onClick={() => {
+          setIsEdit(!isEdit);
+          setCurrdata(todo);
+        }}
+      />
+      <img
+        src={deleteIcon}
+        alt="delete"
+        className="deleteIcon"
+        onClick={handleDelete}
+      ></img>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Button from "react-bootstrap/Button";
+import { Form, Button } from "react-bootstrap";
 
 const TodoCreate = ({ todoInput }) => {
   const [todoAdd, setTodoAdd] = useState("");
@@ -9,19 +9,20 @@ const TodoCreate = ({ todoInput }) => {
     todoInput(todoAdd);
     setTodoAdd("");
   };
-
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label>
-          <input
-            required
-            value={todoAdd}
-            onChange={(e) => setTodoAdd(e.target.value)}
-          />
-        </label>
-        <Button type="submit">Add</Button>
-      </form>
+    <div className="todoform-container">
+      <div className="create-form">
+        <Form onSubmit={handleSubmit}>
+          <Form.Label>
+            <Form.Control
+              required
+              value={todoAdd}
+              onChange={(e) => setTodoAdd(e.target.value)}
+            />
+          </Form.Label>
+          <Button type="submit">Add</Button>
+        </Form>
+      </div>
     </div>
   );
 };

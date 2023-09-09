@@ -6,7 +6,7 @@ import TodoUpdate from "./TodoUpdate";
 const TodoList = () => {
   const [todoList, setTodoList] = useState([]);
   const [isEdit, setIsEdit] = useState(false);
-  const [editId, setEditId] = useState("");
+  const [currdata, setCurrdata] = useState("");
 
   const id = crypto.randomUUID();
 
@@ -15,7 +15,7 @@ const TodoList = () => {
   };
 
   return (
-    <div>
+    <div className="todoList-container">
       <TodoCreate todoInput={todoInput} />
       {isEdit && (
         <TodoUpdate
@@ -23,7 +23,8 @@ const TodoList = () => {
           setIsEdit={setIsEdit}
           todoList={todoList}
           setTodoList={setTodoList}
-          editId={editId}
+          currdata={currdata}
+          setCurrdata={setCurrdata}
         />
       )}
 
@@ -34,7 +35,7 @@ const TodoList = () => {
               todo={todo}
               isEdit={isEdit}
               setIsEdit={setIsEdit}
-              setEditId={setEditId}
+              setCurrdata={setCurrdata}
               todoList={todoList}
               setTodoList={setTodoList}
             />
