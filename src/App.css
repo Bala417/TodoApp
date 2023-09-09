@@ -1,8 +1,11 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 body {
+  width: 100%;
+  height: 100%;
   background-color: rgb(56, 64, 61);
   color: white;
 }
@@ -40,10 +43,10 @@ body {
 }
 .todoform-container {
   display: flex;
-}
-/* .todoform-container > Form {
   justify-content: center;
-} */
+}
 
-.create-form {
+.title {
+  padding-bottom: 40%;
+  text-align: center;
 }

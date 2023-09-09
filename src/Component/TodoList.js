@@ -16,6 +16,7 @@ const TodoList = () => {
 
   return (
     <div className="todoList-container">
+      <h1 className="title">Todo App</h1>
       <TodoCreate todoInput={todoInput} />
       {isEdit && (
         <TodoUpdate
