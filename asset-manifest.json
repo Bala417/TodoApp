@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/TodoApp/static/css/main.e86d3db6.css",
+    "main.js": "/TodoApp/static/js/main.c66ac8ee.js",
+    "static/media/pen-to-square-solid.svg": "/TodoApp/static/media/pen-to-square-solid.decf14385ab7e16cd762dbeff2db7942.svg",
+    "index.html": "/TodoApp/index.html",
+    "main.e86d3db6.css.map": "/TodoApp/static/css/main.e86d3db6.css.map",
+    "main.c66ac8ee.js.map": "/TodoApp/static/js/main.c66ac8ee.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e86d3db6.css",
+    "static/js/main.c66ac8ee.js"
+  ]
+}
